@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -29,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -40,4 +46,51 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation project(path: ':core')
+    implementation 'androidx.fragment:fragment-ktx:1.5.2'
+
+    // VIEWPAGER DOTS INDICATOR
+    implementation 'com.tbuonomo:dotsindicator:4.3'
+
+    // COROUTINES
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.0-alpha01'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+
+
+    //NAVIGATION
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+
+    //ROOM
+    def room_version = "2.4.3"
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+
+    // HILT
+    implementation "com.google.dagger:hilt-android:2.40"
+    kapt "com.google.dagger:hilt-android-compiler:2.40"
+    implementation 'androidx.activity:activity-ktx:1.5.1'
+
+    // GLIDE
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    // RECYCLERVIEW SHIMMER LAYOUT
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // CROP IMAGE
+    implementation 'com.github.Drjacky:ImagePicker:2.3.20'
+
+    // APP CENTER CRASH REPORTER
+    def appCenterSdkVersion = '4.4.5'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+
+    //ADIVERY AD
+    implementation 'com.adivery:sdk:4.3.5'
+
 }
