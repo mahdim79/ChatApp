@@ -8,5 +8,28 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.dust.exchat.presentation.fragment.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/enter_scale_anim"
+            app:exitAnim="@anim/exit_scale_anim"
+            app:popEnterAnim="@anim/enter_scale_anim"
+            app:popExitAnim="@anim/exit_scale_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:enterAnim="@anim/enter_scale_anim"
+            app:exitAnim="@anim/exit_scale_anim"
+            app:popEnterAnim="@anim/enter_scale_anim"
+            app:popExitAnim="@anim/exit_scale_anim"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dust.exchat.presentation.fragment.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dust.exchat.presentation.fragment.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

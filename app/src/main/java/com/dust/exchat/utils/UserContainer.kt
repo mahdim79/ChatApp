@@ -8,4 +8,6 @@ object UserContainer {
     fun updateUser(user: User?){
         this.user = user
     }
+
+    fun getCurrentUser():User? = user
 }

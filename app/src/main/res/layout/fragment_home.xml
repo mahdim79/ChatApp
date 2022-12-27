@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/dl_home_drawer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,9 +13,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_home_toolbar"
                 android:layout_width="match_parent"
                 app:layout_scrollFlags="noScroll"
-                android:layout_height="?attr/actionBarSize"/>
+                app:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                android:layout_height="?attr/actionBarSize">
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_home_navigationBtn"
+                        android:layout_width="40dp"
+                        android:src="@drawable/humberger"
+                        android:scaleType="centerCrop"
+                        android:layout_height="40dp"/>
+                </LinearLayout>-->
+            </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -25,23 +42,17 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <com.dust.exchat.presentation.cviews.button.BoldButton
-                    android:id="@+id/btn_home_signout"
-                    android:layout_width="match_parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginHorizontal="80dp"
-                    android:text="@string/logout"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_height="wrap_content"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nv_home_navView"
         android:layout_width="290dp"
+        app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/layout_navigation_header"
         android:layout_gravity="start"
         android:layout_height="match_parent"/>
 
