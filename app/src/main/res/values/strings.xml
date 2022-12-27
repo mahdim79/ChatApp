@@ -8,4 +8,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="signup">SignUp</string>
     <string name="logout">Logout</string>
+    <string name="please_set_username">please set username</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
 </resources>
