@@ -6,5 +6,5 @@ import com.dust.core.utils.DataStatus
 import kotlinx.coroutines.flow.Flow
 
 class SetUser(private val userRepository: UserRepository) {
-    operator fun invoke(user: User):Flow<DataStatus<Long>> = userRepository.setUser(user)
+    operator fun invoke(user: User) = userRepository.setUser(user)
 }

@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Mahdi/Desktop/ChatApp/app/src/main/res/layout/activity_main.xml" value="0.209375" />
-        <entry key="..\:/Users/Mahdi/Desktop/ChatApp/app/src/main/res/layout/fragment_home.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Mahdi/Desktop/ChatApp/app/src/main/res/layout/fragment_home.xml" value="0.13" />
+        <entry key="..\:/Users/Mahdi/Desktop/ChatApp/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/Mahdi/Desktop/ChatApp/app/src/main/res/layout/fragment_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/Mahdi/Desktop/ChatApp/app/src/main/res/menu/navigation_menu.xml" value="0.209375" />
       </map>
     </option>
   </component>

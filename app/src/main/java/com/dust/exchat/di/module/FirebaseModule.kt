@@ -1,7 +1,8 @@
 package com.dust.exchat.di.module
 
+import com.dust.exchat.framework.firebase.AuthManager
+import com.dust.exchat.framework.firebase.DatabaseManager
 import com.dust.exchat.framework.firebase.mapper.UserHashMapper
-import com.dust.exchat.framework.local.mapper.UserLocalMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,13 +11,13 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class MapperModule {
-    @Singleton
+class FirebaseModule {
     @Provides
-    fun provideUserMapper():UserLocalMapper = UserLocalMapper()
+    @Singleton
+    fun provideAuthManager():AuthManager = AuthManager()
 
-    @Singleton
     @Provides
-    fun provideUserHashMapper():UserHashMapper = UserHashMapper()
+    @Singleton
+    fun provideDbManager(userHashMapper: UserHashMapper):DatabaseManager = DatabaseManager(userHashMapper)
 
 }
