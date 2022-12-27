@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ExChat</string>
+    <string name="username">User Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="signup">SignUp</string>
+    <string name="logout">Logout</string>
 </resources>

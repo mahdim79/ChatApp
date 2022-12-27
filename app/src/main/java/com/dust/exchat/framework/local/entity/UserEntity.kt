@@ -8,6 +8,8 @@ import com.dust.exchat.utils.Constants
 data class UserEntity(
     @PrimaryKey(autoGenerate = true)
     var id:Int? = null,
+    var uid:String,
+    var email:String,
     var userName:String,
     var profilePic:String,
     var phoneNumber:String

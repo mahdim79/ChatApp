@@ -1,6 +1,7 @@
 package com.dust.exchat.di.module
 
 import com.dust.core.data.repo.UserRepository
+import com.dust.core.usecase.GetUser
 import com.dust.core.usecase.SetUser
 import dagger.Module
 import dagger.Provides
@@ -16,5 +17,11 @@ class UseCaseModule {
     @Provides
     fun provideSetUser(userRepository: UserRepository):SetUser{
         return SetUser(userRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetUser(userRepository: UserRepository):GetUser{
+        return GetUser(userRepository)
     }
 }
